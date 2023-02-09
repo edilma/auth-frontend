@@ -10,12 +10,23 @@
     const handleSubmit= (e)=>{
         e.preventDefault()
 //make a post request to the API with the form data
+fetch("http://127.0.0.1:5002/signup", {
+    method: "POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({email, password})
+})
 // create a new user inthe database
 //then
+.then(res=> res.json())
+.then(response=>{
+    setUser(response.user)
+    navigate("/secret")
+})
+.catch(err=>alert(err.message))
 //1.  do something with the new user
     setUser({email,password})
 //2.redirect to the content page
-navigate('/secret')
+// navigate('/secret')
     }
 
     return (
