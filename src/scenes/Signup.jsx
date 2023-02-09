@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,6 +14,9 @@ export default function Signup(){
         </Row>
     <Row>
         <Col> <SignupForm /></Col>
+    </Row>
+    <Row>
+        <Col><Link to="/login" className="text-light pt-4 d-block">Already a member? Then login up boo</Link></Col>
     </Row>
     </Container>
     )
