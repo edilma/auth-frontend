@@ -37,26 +37,33 @@ fetch("https://auth-api-er.web.app/signup", {
     return (
         <>
 
-        <form onSubmit={handleSubmit}>
-            <Form.Group>
+        <form onSubmit={handleSubmit} >
+            <Form.Group ><p className="text-light">Sign up in to continue to the Beer Festival</p>
                 <Form.Label>Email</Form.Label>
                 <Form.Control 
                 name="email"
-                type="email" 
-                placeholder="Enter Email" 
                 value={email} 
+                placeholder="Enter Email" 
+                type="email" 
+                className="p-3 hover-effect"
                 onChange={e=>setEmail(e.target.value)}/>
             </Form.Group>
             <Form.Group>
                 <Form.Label>password</Form.Label>
                 <Form.Control 
                 name="password"
-                type="password" 
-                placeholder="Password" 
                 value={password} 
+                placeholder="Password" 
+                type="password" 
+                className="p-3 hover-effect"
                 onChange={e=>setPassword(e.target.value)}/>
             </Form.Group>
-            <Button variant="primary" type="submit">Submit</Button>
+            <Button 
+
+            variant="outline-light" 
+            size="lg"
+            type="submit"
+            className="mt-3 hover-effect">Submit</Button>
             
         </form>
         </>
