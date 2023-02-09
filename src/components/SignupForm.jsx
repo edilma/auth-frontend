@@ -10,7 +10,7 @@
     const handleSubmit= (e)=>{
         e.preventDefault()
 //make a post request to the API with the form data
-fetch("http://127.0.0.1:5002/signup", {
+fetch("https://auth-api-er.web.app/signup", {
     method: "POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({email, password})
